@@ -1,0 +1,9 @@
+---
+- name: add users to kvm and libvirt group
+  user:
+    name: "{{ item }}"
+    append: yes
+    groups:
+      - kvm
+      - libvirt
+  with_items: "{{ kvm_allowed_user }}"

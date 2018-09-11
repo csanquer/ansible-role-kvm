@@ -1,0 +1,20 @@
+---
+- name: install KVM dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ kvm_dependencies }}"
+
+- name: install virt manager GUI
+  apt:
+    name: virt-manager
+    state: present
+  when: kvm_gui
+
+- name: "download docker_kvm2_driver"
+  get_url:
+      url: "{{ docker_kvm2_driver_url }}"
+      dest: /usr/local/bin/docker_kvm2_driver
+      mode: 0755
+      force: no
+  when: docker_kvm2_driver

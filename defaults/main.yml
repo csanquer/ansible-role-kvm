@@ -1,0 +1,5 @@
+---
+kvm_gui: false
+docker_kvm2_driver: false
+
+kvm_allowed_user: []

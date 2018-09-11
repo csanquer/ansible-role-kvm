@@ -1,0 +1,8 @@
+---
+- include: install.yml
+  tags:
+  - kvm
+
+- include: configure.yml
+  tags:
+  - kvm

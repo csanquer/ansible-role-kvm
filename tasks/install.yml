@@ -1,9 +1,8 @@
 ---
 - name: install KVM dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ kvm_dependencies }}"
     state: present
-  with_items: "{{ kvm_dependencies }}"
 
 - name: install virt manager GUI
   apt:

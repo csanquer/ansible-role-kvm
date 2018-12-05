@@ -6,4 +6,4 @@
     groups:
       - kvm
       - libvirt
-  with_items: "{{ kvm_allowed_user }}"
+  loop: "{{ kvm_allowed_user }}"

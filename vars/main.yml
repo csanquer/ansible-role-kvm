@@ -5,3 +5,4 @@ kvm_dependencies:
   - qemu-kvm
 
 docker_kvm2_driver_url: https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2
+docker_kvm2_driver_binary: /usr/local/bin/docker-machine-driver-kvm2

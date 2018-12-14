@@ -13,7 +13,7 @@
 - name: "download docker_kvm2_driver"
   get_url:
       url: "{{ docker_kvm2_driver_url }}"
-      dest: /usr/local/bin/docker_kvm2_driver
+      dest: "{{ docker_kvm2_driver_binary }}"
       mode: 0755
       force: no
   when: docker_kvm2_driver

@@ -8,7 +8,7 @@
   apt:
     name: virt-manager
     state: present
-  when: kvm_gui
+  when: kvm_gui|bool
 
 - name: "download docker_kvm2_driver"
   get_url:
@@ -16,4 +16,4 @@
       dest: "{{ docker_kvm2_driver_binary }}"
       mode: 0755
       force: no
-  when: docker_kvm2_driver
+  when: docker_kvm2_driver|bool
